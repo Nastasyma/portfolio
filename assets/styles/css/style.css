@@ -378,3 +378,35 @@ ul {
 ul li {
   list-style: none;
 }
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1440px;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+.header__logo {
+  width: 20px;
+  height: 20px;
+}
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.header__nav-item {
+  color: var(--primary-font-color);
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  text-transform: uppercase;
+}
