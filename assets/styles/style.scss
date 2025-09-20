@@ -1,4 +1,5 @@
 @import './variables.scss';
+$images-path: '../assets/images/';
 
 :root {
   --primary-color: #{$primary-color};
@@ -108,7 +109,6 @@ ul li {
 .hero {
   &__content {
     display: flex;
-    justify-content: space-between;
     gap: 40px;
   }
 
@@ -135,7 +135,8 @@ ul li {
 
     &-line {
       width: 1px;
-      height: 536px;
+      // height: 536px;
+      flex: 1 0 0;
       background-color: var(--primary-font-color);
     }
 
@@ -152,5 +153,134 @@ ul li {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    padding-left: 20px;
+  }
+
+  &__title-content {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    height: 100%;
+    // padding-top: 100px;
+
+    &-top {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 100px 0 160px;
+
+      &-stats {
+        display: flex;
+        gap: 60px;
+
+        &-item {
+          display: flex;
+          gap: 9px;
+
+          &-number {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 8px;
+
+            div {
+              font-family: var(--primary-font);
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+            }
+          }
+
+          span {
+            font-family: var(--secondary-font);
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 54px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      &-maintitle {
+        max-width: 740px;
+
+        h1 {
+          font-family: var(--secondary-font);
+          // font-size: 116px;
+          font-size: 7.25rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 132px;
+          text-transform: uppercase;
+        }
+      }
+
+      &-subtitle {
+        h3 {
+          font-family: var(--secondary-font);
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      gap: 8px;
+
+      span {
+        font-family: var(--primary-font);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      &-arrow {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__secondary-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-content {
+      width: 220px;
+      height: 220px;
+      flex: 1 0 0;
+      aspect-ratio: 1/1;
+      background: url(/assets/images/img-10.webp) lightgray 50% / cover no-repeat;
+    }
+  }
+
+  &__primary-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-content {
+      max-width: 280px;
+      max-height: 374px;
+    }
+
+    &-text {
+      font-family: var(--primary-font);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      max-width: 220px;
+      align-self: flex-end;
+      text-align: end;
+    }
   }
 }
