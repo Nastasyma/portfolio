@@ -1,6 +1,7 @@
 :root {
   --primary-color: #222222;
   --secondary-color: #ffffff;
+  --ascent-color: #FF3C3C;
   --primary-font-color: #ffffff;
   --secondary-font-color: #222222;
   --primary-font: Mulish, sans-serif;
@@ -77,6 +78,32 @@ ul li {
   line-height: 40px;
   text-transform: uppercase;
   margin-bottom: 12px;
+}
+
+.order-button {
+  display: flex;
+  height: 60px;
+  min-width: 200px;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  text-align: center;
+  background: var(--primary-color);
+  color: var(--primary-font-color);
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.order-button:hover {
+  background-color: var(--ascent-color);
+  color: var(--secondary-font-color);
 }
 
 .header__container {
@@ -339,4 +366,91 @@ ul li {
 }
 .portfolio__content-images-slider-item.item-type-5 img {
   width: 280px;
+}
+
+.price__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.price__content-title {
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.price__content-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.price__content-cards-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  width: 320px;
+  height: 501px;
+  border: 1px solid var(--primary-color);
+  padding: 24px;
+}
+.price__content-cards-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.price__content-cards-item-info-type {
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.price__content-cards-item-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.price__content-cards-item-info-list li {
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.price__content-cards-item-info-list li::before {
+  content: "";
+  top: 3px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-color);
+  margin-right: 6px;
+  margin-bottom: 3px;
+}
+.price__content-cards-item-info-price {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.price__content-cards-item-description {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.price__content-cards-item-description p {
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 20px;
+}
+.price__content-cards-item-description button {
+  width: 100%;
 }
