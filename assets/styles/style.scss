@@ -264,10 +264,17 @@ ul li {
     align-items: center;
 
     &-content {
-      height: 220px;
       flex: 1 0 0;
       aspect-ratio: 1/1;
-      background: url(/assets/images/img-10.webp) lightgray 50% / cover no-repeat;
+      width: 220px;
+      // background: url(/assets/images/img-10.webp) lightgray 50% / cover no-repeat;
+
+
+      img {
+        max-height: 220px;
+        object-fit: cover;
+        object-position: center;
+      }
     }
   }
 
