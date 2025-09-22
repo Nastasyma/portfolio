@@ -132,6 +132,12 @@ ul li {
   font-weight: normal;
   line-height: 24px;
   text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.header__nav-item:hover {
+  color: var(--ascent-color);
 }
 
 .hero__content {
@@ -237,6 +243,8 @@ ul li {
 .hero__title-content-bottom {
   display: flex;
   gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 .hero__title-content-bottom span {
   font-family: var(--primary-font);
@@ -248,6 +256,13 @@ ul li {
 .hero__title-content-bottom-arrow {
   width: 24px;
   height: 24px;
+  transition: all 0.2s ease-in-out;
+}
+.hero__title-content-bottom:hover {
+  color: var(--ascent-color);
+}
+.hero__title-content-bottom:hover .hero__title-content-bottom-arrow {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(85%) saturate(2807%) hue-rotate(336deg) brightness(100%) contrast(108%);
 }
 .hero__secondary-photo {
   display: flex;
@@ -395,6 +410,15 @@ ul li {
   height: 501px;
   border: 1px solid var(--primary-color);
   padding: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.price__content-cards-item:hover {
+  border: 1px solid var(--ascent-color);
+}
+.price__content-cards-item:hover .order-button {
+  background-color: var(--ascent-color);
+  color: var(--secondary-font-color);
 }
 .price__content-cards-item-info {
   display: flex;
@@ -500,6 +524,14 @@ ul li {
   line-height: 28px;
   text-transform: uppercase;
   padding: 19px 0 16px 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.faq__content-questions-item-question:hover {
+  color: var(--ascent-color);
+}
+.faq__content-questions-item-question:hover .faq__content-questions-item-question-icon {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(85%) saturate(2807%) hue-rotate(336deg) brightness(100%) contrast(108%);
 }
 .faq__content-questions-item-question-icon {
   width: 24px;
@@ -602,4 +634,8 @@ ul li {
   line-height: 24px;
   text-transform: uppercase;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.footer__content-bottom-nav-list li:hover a {
+  color: var(--ascent-color);
 }

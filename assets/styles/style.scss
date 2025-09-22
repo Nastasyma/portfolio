@@ -141,6 +141,13 @@ ul li {
     font-weight: normal;
     line-height: 24px;
     text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--ascent-color);
+    }
   }
 }
 
@@ -270,6 +277,8 @@ ul li {
     &-bottom {
       display: flex;
       gap: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
 
       span {
         font-family: var(--primary-font);
@@ -282,6 +291,16 @@ ul li {
       &-arrow {
         width: 24px;
         height: 24px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        color: var(--ascent-color);
+
+        .hero__title-content-bottom-arrow {
+          filter: brightness(0) saturate(100%) invert(42%) sepia(85%) saturate(2807%) hue-rotate(336deg)
+            brightness(100%) contrast(108%);
+        }
       }
     }
   }
@@ -461,6 +480,17 @@ ul li {
         height: 501px;
         border: 1px solid var(--primary-color);
         padding: 24px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          border: 1px solid var(--ascent-color);
+
+          .order-button {
+            background-color: var(--ascent-color);
+            color: var(--secondary-font-color);
+          }
+        }
 
         &-info {
           display: flex;
@@ -586,6 +616,17 @@ ul li {
           line-height: 28px;
           text-transform: uppercase;
           padding: 19px 0 16px 0;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: var(--ascent-color);
+
+            .faq__content-questions-item-question-icon {
+              filter: brightness(0) saturate(100%) invert(42%) sepia(85%) saturate(2807%) hue-rotate(336deg)
+                brightness(100%) contrast(108%);
+            }
+          }
 
           &-icon {
             width: 24px;
@@ -712,6 +753,13 @@ ul li {
               line-height: 24px;
               text-transform: uppercase;
               text-decoration: none;
+              transition: all 0.3s ease-in-out;
+            }
+
+            &:hover {
+              a {
+                color: var(--ascent-color);
+              }
             }
           }
         }
