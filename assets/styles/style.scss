@@ -226,7 +226,6 @@ ul li {
 
     &-line {
       width: 1px;
-      // height: 536px;
       flex: 1 0 0;
       background-color: var(--primary-font-color);
     }
@@ -250,9 +249,7 @@ ul li {
   &__title-content {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     height: 100%;
-    // padding-top: 100px;
 
     &-top {
       display: flex;
@@ -299,7 +296,6 @@ ul li {
 
         h1 {
           font-family: var(--secondary-font);
-          // font-size: 116px;
           font-size: 7.25rem;
           font-style: normal;
           font-weight: 300;
@@ -384,7 +380,6 @@ ul li {
       flex: 1 0 0;
       aspect-ratio: 1/1;
       width: 220px;
-      // background: url(/assets/images/img-10.webp) lightgray 50% / cover no-repeat;
 
       img {
         max-height: 220px;
@@ -430,7 +425,6 @@ ul li {
       width: 100%;
 
       img {
-        // max-height: 440px;
         aspect-ratio: 1 / 1;
         object-fit: cover;
         object-position: center;
@@ -474,10 +468,12 @@ ul li {
       &-slider {
         position: relative;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         gap: 20px;
-        transform: translateX(-84.7%);
+        transform: translateX(-50%);
+        left: 50%;
+        width: 100%;
 
         &-item {
           &.item-type-1 {
@@ -671,7 +667,6 @@ ul li {
       &-item {
         display: flex;
         flex-direction: column;
-        // border-bottom: 1px solid var(--secondary-color);
 
         &::after {
           content: '';
@@ -940,12 +935,6 @@ ul li {
     }
   }
 
-  .portfolio {
-    &__content-images-slider {
-      transform: translateX(-202.7%);
-    }
-  }
-
   .price {
     &__content-cards {
       gap: 20px;
@@ -1024,12 +1013,6 @@ ul li {
       &-content {
         max-width: 220px;
       }
-    }
-  }
-
-  .portfolio {
-    &__content-images-slider {
-      transform: translateX(-460.7%);
     }
   }
 
