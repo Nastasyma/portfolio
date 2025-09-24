@@ -289,14 +289,21 @@ ul li {
   text-transform: uppercase;
 }
 .hero__title-content-bottom {
+  cursor: pointer;
+}
+.hero__title-content-bottom .scroll-button {
   display: flex;
+  align-items: center;
   gap: 8px;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 .hero__title-content-bottom span {
   font-family: var(--primary-font);
   font-size: 16px;
   font-style: normal;
+  color: var(--primary-font-color);
   font-weight: 400;
   line-height: 24px;
   transition: all 0.2s ease-in-out;
@@ -586,7 +593,10 @@ ul li {
   background: url(/assets/icons/minus.svg) center/cover no-repeat;
 }
 .faq__content-questions-item.active .faq__content-questions-item-answer {
-  display: block;
+  padding-bottom: 19px;
+  opacity: 1;
+  height: auto;
+  overflow: hidden;
 }
 .faq__content-questions-item-question {
   display: flex;
@@ -624,13 +634,15 @@ ul li {
   cursor: pointer;
 }
 .faq__content-questions-item-answer {
-  display: none;
   font-family: var(--primary-font);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  padding-bottom: 19px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .footer__content {
