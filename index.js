@@ -68,3 +68,29 @@ if (activeQuestionIndex) {
 } else {
   questionItem[0].classList.add('active');
 }
+
+// modal
+
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal__content-close');
+const orderButton = document.querySelectorAll('.order-button');
+const overlay = document.querySelector('.overlay');
+
+function openModal() {
+  modal.classList.add('open');
+  body.style.overflow = 'hidden';
+  overlay.classList.add('active');
+};
+
+function closeModal() {
+  modal.classList.remove('open');
+  body.style.overflow = 'auto';
+  overlay.classList.remove('active');
+};
+
+orderButton.forEach((item) => {
+  item.addEventListener('click', openModal);
+});
+
+modalClose.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
