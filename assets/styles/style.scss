@@ -489,6 +489,28 @@ ul li {
 
     &-images {
       overflow: hidden;
+      position: relative;
+
+      &-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        &-centerzone {
+          width: 40%;
+        }
+
+        &-leftzone,
+        &-rightzone {
+          width: 30%;
+          cursor: grab;
+        }
+      }
 
       &-slider {
         position: relative;
@@ -496,9 +518,16 @@ ul li {
         justify-content: center;
         align-items: center;
         gap: 20px;
-        transform: translateX(-50%);
-        left: 50%;
         width: 100%;
+        transition: all 3s ease-in-out;
+
+        &-item:first-child {
+          margin-left: 20px;
+        }
+
+        &-item:last-child {
+          margin-right: 20px;
+        }
 
         &-item {
           &.item-type-1 {

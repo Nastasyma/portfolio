@@ -80,13 +80,13 @@ function openModal() {
   modal.classList.add('open');
   body.style.overflow = 'hidden';
   overlay.classList.add('active');
-};
+}
 
 function closeModal() {
   modal.classList.remove('open');
   body.style.overflow = 'auto';
   overlay.classList.remove('active');
-};
+}
 
 orderButton.forEach((item) => {
   item.addEventListener('click', openModal);
@@ -94,3 +94,44 @@ orderButton.forEach((item) => {
 
 modalClose.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+// potfolio slider
+
+const slider = document.querySelector('.portfolio__content-images-slider');
+// const sliderOverlay = document.querySelector('.portfolio__content-images-overlay');
+const sliderLeftZone = document.querySelector('.portfolio__content-images-overlay-leftzone');
+const sliderRightZone = document.querySelector('.portfolio__content-images-overlay-rightzone');
+const item = document.querySelectorAll('.portfolio__content-images-slider-item');
+
+function calculateScrollWidth() {
+  let sumItemsWidth = 0;
+
+  item.forEach((item) => {
+    sumItemsWidth += item.offsetWidth;
+  });
+
+  const sliderWidth = sumItemsWidth + (item.length + 1) * 20;
+  const scrollWidth = (sliderWidth - slider.offsetWidth) / 2;
+  // console.log('slider sum width:', sliderWidth);
+  // console.log('slider offset width:', slider.offsetWidth);
+  // console.log('slider scroll width:', scrollWidth);
+
+  return scrollWidth;
+}
+
+function moveSliderLeft() {
+  const width = calculateScrollWidth();
+  slider.style.transform = `translateX(${width}px)`;
+}
+
+function moveSliderRight() {
+  const width = calculateScrollWidth();
+  slider.style.transform = `translateX(-${width}px)`;
+}
+
+sliderLeftZone.addEventListener('mouseover', moveSliderLeft);
+sliderRightZone.addEventListener('mouseover', moveSliderRight);
+
+window.addEventListener('resize', () => {
+  slider.style.transform = 'translateX(0px)';
+});
