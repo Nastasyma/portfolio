@@ -98,7 +98,6 @@ overlay.addEventListener('click', closeModal);
 // potfolio slider
 
 const slider = document.querySelector('.portfolio__content-images-slider');
-// const sliderOverlay = document.querySelector('.portfolio__content-images-overlay');
 const sliderLeftZone = document.querySelector('.portfolio__content-images-overlay-leftzone');
 const sliderRightZone = document.querySelector('.portfolio__content-images-overlay-rightzone');
 const item = document.querySelectorAll('.portfolio__content-images-slider-item');
@@ -131,6 +130,9 @@ function moveSliderRight() {
 
 sliderLeftZone.addEventListener('mouseover', moveSliderLeft);
 sliderRightZone.addEventListener('mouseover', moveSliderRight);
+
+sliderLeftZone.addEventListener('touchmove', moveSliderLeft);
+sliderRightZone.addEventListener('touchmove', moveSliderRight);
 
 window.addEventListener('resize', () => {
   slider.style.transform = 'translateX(0px)';
