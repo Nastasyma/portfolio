@@ -22,6 +22,15 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ascent-color);
+  border-radius: 4px;
+}
+
 body {
   background-color: var(--primary-color);
   color: var(--primary-font-color);
@@ -373,6 +382,7 @@ ul li {
           }
 
           svg {
+            transform: scale(1.2);
             path {
               stroke: var(--ascent-color);
             }

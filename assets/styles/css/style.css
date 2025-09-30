@@ -18,6 +18,16 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ascent-color);
+  border-radius: 4px;
+}
+
 body {
   background-color: var(--primary-color);
   color: var(--primary-font-color);
@@ -318,6 +328,9 @@ ul li {
 @media (hover: hover) {
   .hero__title-content-bottom:hover span {
     color: var(--ascent-color);
+  }
+  .hero__title-content-bottom:hover svg {
+    transform: scale(1.2);
   }
   .hero__title-content-bottom:hover svg path {
     stroke: var(--ascent-color);
