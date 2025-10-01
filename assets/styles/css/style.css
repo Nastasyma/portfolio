@@ -918,17 +918,8 @@ ul li {
   }
 }
 @media (max-width: 768px) {
-  .header__nav-wrapper {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 50;
-    overflow: hidden;
-  }
   .header__nav {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     top: 60px;
