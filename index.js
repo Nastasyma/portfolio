@@ -51,23 +51,35 @@ const question = document.querySelectorAll('.faq__content-questions-item-questio
 
 question.forEach((item, index) => {
   item.addEventListener('click', () => {
-    questionItem.forEach((item) => {
-      item.classList.remove('active');
+    const currentQuestionItem = item.parentElement;
+
+    questionItem.forEach((questionItem) => {
+      if (questionItem !== currentQuestionItem) {
+        questionItem.classList.remove('active');
+      }
     });
 
     item.parentElement.classList.toggle('active');
 
-    localStorage.setItem('_activeQuestionIndex', index);
+    // localStorage.setItem('_activeQuestionIndex', index);
+    const questionStateArray = Array.from(questionItem).map((item) => item.classList.contains('active'));
+    localStorage.setItem('_questionsState', JSON.stringify(questionStateArray));
   });
 });
 
-const activeQuestionIndex = localStorage.getItem('_activeQuestionIndex');
+window.addEventListener('DOMContentLoaded', () => {
+  const questionStateArray = JSON.parse(localStorage.getItem('_questionsState'));
 
-if (activeQuestionIndex) {
-  questionItem[activeQuestionIndex].classList.add('active');
-} else {
-  questionItem[0].classList.add('active');
-}
+  questionItem.forEach((item, index) => {
+    if (questionStateArray && questionStateArray[index]) {
+      item.classList.add('active');
+    }
+  });
+
+  if (!questionStateArray) {
+    questionItem[0].classList.add('active');
+  }
+});
 
 // modal
 
