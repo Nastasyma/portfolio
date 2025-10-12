@@ -159,7 +159,3 @@ sliderLeftZone.addEventListener('touchmove', moveSliderLeft);
 sliderRightZone.addEventListener('touchmove', moveSliderRight);
 
 window.addEventListener('resize', resetSlider);
-
-slider.addEventListener('transitionend', () => {
-  sliderTransform = getComputedStyle(slider).transform;
-});
