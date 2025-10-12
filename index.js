@@ -140,12 +140,26 @@ function moveSliderRight() {
   slider.style.transform = `translateX(-${width}px)`;
 }
 
+function resetSlider() {
+  slider.style.transform = 'translateX(0px)';
+}
+
+function stopSlider() {
+  const sliderTransform = getComputedStyle(slider).transform;
+  slider.style.transform = sliderTransform;
+}
+
 sliderLeftZone.addEventListener('mouseover', moveSliderLeft);
 sliderRightZone.addEventListener('mouseover', moveSliderRight);
+
+sliderLeftZone.addEventListener('mouseout', stopSlider);
+sliderRightZone.addEventListener('mouseout', stopSlider);
 
 sliderLeftZone.addEventListener('touchmove', moveSliderLeft);
 sliderRightZone.addEventListener('touchmove', moveSliderRight);
 
-window.addEventListener('resize', () => {
-  slider.style.transform = 'translateX(0px)';
+window.addEventListener('resize', resetSlider);
+
+slider.addEventListener('transitionend', () => {
+  sliderTransform = getComputedStyle(slider).transform;
 });
